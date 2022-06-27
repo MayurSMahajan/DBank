@@ -28,9 +28,9 @@ actor DBank{
 
   // Creating a query function:- these functions are faster then update functions
   // But they can not be used to update the state of our cannisters.
-  public query checkBalance() : async Nat {
+  public query func checkBalance() : async Nat {
     //Note that all returns in motoko are async and we must specify it.
     return currentValue;
-  }
+  };
   //Note we aren't chainging the variable currentValue, we are simply reading it.
 }
