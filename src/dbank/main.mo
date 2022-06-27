@@ -2,10 +2,14 @@ import Debug "mo:base/Debug"; //importing this module for printing in the consol
 //An actor is like a class, which encapsulates data member and methods and binds them with a state.
 actor DBank{ 
   Debug.print("DBank Application Started");
-  var currentValue = 300;
-  currentValue := 200; //assignment is done using := instead of = sign.
+  
+  //Declaring a Orthogonal Persistent variable using the stable keyword
+  //This will mean that the value of currentValue is saved even when the state of the app is restarted.
+  //Basically it is like permanently saving our data without using any Database.
+  stable var currentValue = 300;
 
-  Debug.print(debug_show(currentValue));// to print any thing thats not a string, we use debug_show()
+  //When := this operator is encountered, the state of the currentValue will be replaced with 200
+  // currentValue := 200; 
 
   //func keyword defines a function, public specifies the scope to public
   //Note we have to specify the type of argument, here it is Nat for Natural Number
