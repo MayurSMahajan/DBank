@@ -1,5 +1,6 @@
 service : {
   checkBalance: () -> (nat) query;
+  compound: () -> () oneway;
   topUp: (nat) -> () oneway;
   withdraw: (nat) -> () oneway;
 }
