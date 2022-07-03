@@ -9,6 +9,8 @@ actor DBank{
   //This will mean that the value of currentValue is saved even when the state of the app is restarted.
   //Basically it is like permanently saving our data without using any Database.
   stable var currentValue : Float = 300;
+  currentValue := 100;
+  Debug.print(debug_show(currentValue));
   
   stable var startTime = Time.now();
   Debug.print(debug_show(startTime));
